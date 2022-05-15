@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- FA link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- bootstrap link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <!-- css link -->
+    <link rel="stylesheet" href="./assets/style.css" />
+
+    <title>Weather Forecast</title>
+  </head>
+
+  <!-- Body -->
+  <body class="">
+    <header class="hero sticky-top text-center mb-4">
+      <h1><i class="fa-solid fa-cloud-sun"></i>Weather Finder</h1>
+    </header>
+
+    <!-- Main Section -->
+    <main class="container-fluid">
+      <section class="row">
+        <!-- navigation section -->
+        <section class="navigation p-5">
+          <!-- search -->
+          <div class="search">
+            <form
+              id="user-form"
+              class="d-flex flex-wrap justify-content-center"
+            >
+              <input
+                name="city"
+                id="city"
+                type="text"
+                autofocus="true"
+                placeholder="Type City Here"
+                class="form-input w-100 my-3 p-2 rounded-pill text-center"
+              />
+              <button
+                id="search-submit"
+                type="submit"
+                class="button w-25 btn-search btn rounded-pill mb-4"
+              >
+                Search!
+              </button>
+            </form>
+          </div>
+
+          <!-- previously searched cities section -->
+          <div class="h-50 px-3 text-center">
+            <select id="cities" class="w-25 p-2 rounded-pill text-center">
+              <option value="Previously Searched">Previously Searched</option>
+            </select>
+          </div>
+        </section>
+
+        <!-- current weather -->
+        <section class="curr-container d-flex flex-wrap justify-content-center">
+          <div class="justify-content-center align-items-center">
+            <h2 id="currDate"></h2>
+            <h2 class="w-100 mb-0 text-center">
+              <span id="curr-city" class="w-100">City</span> Weather
+              <i id="temp" class="fa-solid fa-temperature-high fa-lg"> </i
+              ><i class="fa-solid fa-temperature-low fa-lg"></i>
+            </h2>
+
+            <h3
+              class="weather-cont d-flex flex-wrap justify-content-center"
+            ></h3>
+
+            <div class="d-flex flex-wrap justify-content-center">
+              <h2 class="w-100 text-center">
+                UV Index
+                <i class="fa-solid fa-sun"></i>
+              </h2>
+
+              <h3
+                class="weather-cont d-flex flex-wrap justify-content-center"
+              ></h3>
+            </div>
+            <div class="d-flex flex-wrap justify-content-center">
+              <h2 class="w-100 text-center">
+                Wind
+                <i id="wind" class="fa-solid fa-wind"></i>
+              </h2>
+
+              <h3
+                class="weather-cont d-flex flex-wrap justify-content-center"
+              ></h3>
+            </div>
+            <div class="">
+              <h2 class="w-100 text-center">
+                Humidity
+                <i id="humidity" class="fa-solid fa-smog"></i>
+              </h2>
+
+              <h3
+                class="weather-cont d-flex flex-wrap justify-content-center"
+              ></h3>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section id="days" class="forecast d-flex text-center"></section>
+    </main>
+
+    <!-- moment link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <!-- jquery link -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!-- luxon link -->
+    <script src="https://cdn.jsdelivr.net/npm/luxon@2.3.0/build/global/luxon.min.js"></script>
+    <!-- js link -->
+    <script src="./assets/script.js"></script>
+  </body>
+</html>
