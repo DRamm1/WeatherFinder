@@ -19,7 +19,8 @@
     <!-- css link -->
     <link rel="stylesheet" href="./assets/style.css" />
 
-    <title>Weather Forecast</title>
+  <title>Weather Forecast</title>
+  
   </head>
 
   <!-- Body -->
@@ -40,11 +41,11 @@
               class="d-flex flex-wrap justify-content-center"
             >
               <input
-                name="city"
-                id="city"
+                name="location"
+                id="location"
                 type="text"
                 autofocus="true"
-                placeholder="Type City Here"
+                placeholder="Type location Here"
                 class="form-input w-100 my-3 p-2 rounded-pill text-center"
               />
               <button
@@ -59,69 +60,61 @@
 
           <!-- previously searched cities section -->
           <div class="h-50 px-3 text-center">
-            <select id="cities" class="w-25 p-2 rounded-pill text-center">
+            <select id="cities" class="prv w-25 p-2 rounded-pill text-center">
               <option value="Previously Searched">Previously Searched</option>
             </select>
           </div>
         </section>
 
         <!-- current weather -->
-        <section class="curr-container d-flex flex-wrap justify-content-center">
-          <div class="justify-content-center align-items-center">
+        <section class="d-flex flex-column">
+          <div class="text-center">
             <h2 id="currDate"></h2>
-            <h2 class="w-100 mb-0 text-center">
-              <span id="curr-city" class="w-100">City</span> Weather
-              <i id="temp" class="fa-solid fa-temperature-high fa-lg"> </i
+            <h2 class="w-100 mb-0">
+              <span id="currLocation" class="w-100">location</span> Weather
+              <i class="fa-solid fa-temperature-high fa-lg"> </i
               ><i class="fa-solid fa-temperature-low fa-lg"></i>
+            </h2>
+            <h3
+            id="temp" class="weather-container"
+            ></h3>
+          </div>
+          <div class="text-center">
+            <h3 class="w-100 text-center">UV Index <i class="fa-solid fa-sun"></i></h3>
+            <h3 id="uv-index"></h3>
+          </div>
+          <div class="text-center">
+            <h2 class="w-100">
+              Wind
+              <i class="fa-solid fa-wind"></i>
             </h2>
 
             <h3
-              class="weather-cont d-flex flex-wrap justify-content-center"
+              id="wind" class="weather-cont d-flex flex-wrap justify-content-center"
             ></h3>
-
-            <div class="d-flex flex-wrap justify-content-center">
-              <h2 class="w-100 text-center">
-                UV Index
-                <i class="fa-solid fa-sun"></i>
-              </h2>
-
-              <h3
-                class="weather-cont d-flex flex-wrap justify-content-center"
-              ></h3>
-            </div>
-            <div class="d-flex flex-wrap justify-content-center">
-              <h2 class="w-100 text-center">
-                Wind
-                <i id="wind" class="fa-solid fa-wind"></i>
-              </h2>
-
-              <h3
-                class="weather-cont d-flex flex-wrap justify-content-center"
-              ></h3>
-            </div>
-            <div class="">
-              <h2 class="w-100 text-center">
-                Humidity
-                <i id="humidity" class="fa-solid fa-smog"></i>
-              </h2>
-
-              <h3
-                class="weather-cont d-flex flex-wrap justify-content-center"
-              ></h3>
-            </div>
           </div>
-        </section>
+          <div class="text-center">
+            <h2 class="w-100">
+              Humidity
+              <i class="fa-solid fa-smog"></i>
+            </h2>
+            <h3
+            id="humidity" class="weather-cont d-flex flex-wrap justify-content-center"
+            ></h3>
+          </div>
+        </div>
       </section>
+    </section>
 
-      <section id="days" class="forecast d-flex text-center"></section>
+    <section id="weekDayContainer" class="forecast d-flex text-center justify-content-around p-4">
+    </section>
+
     </main>
 
     <!-- moment link -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <!-- jquery link -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <!-- luxon link -->
-    <script src="https://cdn.jsdelivr.net/npm/luxon@2.3.0/build/global/luxon.min.js"></script>
     <!-- js link -->
     <script src="./assets/script.js"></script>
   </body>

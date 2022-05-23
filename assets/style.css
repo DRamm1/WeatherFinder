@@ -1,4 +1,13 @@
 .button {
    border: 1px solid;
+   color: green;
 }
 
+.prv {
+   color: orange;
+   border-color: orange;
+}
+
+.forecast {
+   margin-bottom: 5px;
+}
